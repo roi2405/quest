@@ -21,10 +21,10 @@ class CreateUserView(generics.CreateAPIView):
             # queryset = User.objects.filter(mail=mail)
             # if queryset.exists():  # there's already a user with that mail.
             #     return Response(status=status.HTTP_406_NOT_ACCEPTABLE)
-            city = serializer.data.get('city')
-            eduction = serializer.data.get('education')
+            # city = serializer.data.get('city')
+            # eduction = serializer.data.get('education')
             name = serializer.data.get('name')
-            user = User(city=city, education=eduction, name=name)
+            user = User(name=name)
             user.save()
 
             return Response(UserSerializer(user).data, status=status.HTTP_201_CREATED)

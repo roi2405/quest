@@ -29,10 +29,10 @@ def get_all_class_fields(class_, fields_to_remove=None):
 # Create your models here.
 class User(models.Model):
     name = models.CharField(max_length=NAME_MAX_LENGTH, unique=False, default="")
-    education = models.CharField(max_length=EDUCATION_MAX_LENGTH, unique=False, default="")
-    occupation = models.CharField(max_length=OCCUPATION_MAX_LENGTH, unique=False, default="")
-    city = models.CharField(max_length=CITY_MAX_LENGTH, unique=False, default="")
-    country = models.CharField(max_length=COUNTRY_MAX_LENGTH, unique=False, default="")
+    # education = models.CharField(max_length=EDUCATION_MAX_LENGTH, unique=False, default="")
+    # occupation = models.CharField(max_length=OCCUPATION_MAX_LENGTH, unique=False, default="")
+    # city = models.CharField(max_length=CITY_MAX_LENGTH, unique=False, default="")
+    # country = models.CharField(max_length=COUNTRY_MAX_LENGTH, unique=False, default="")
     # user_id = models.CharField(max_length=USER_ID_LENGTH, unique=True, default=generate_unique_user_id)  # maybe use 'id' and 'primary_key=True'
     created_at = models.DateField(auto_now_add=True)
 
